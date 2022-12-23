@@ -1,0 +1,15 @@
+input_dir: MovieApp/Resources
+output_dir: MovieApp/Resources/Generated
+
+#strings:
+#  inputs: Resources/Base.lproj
+#  outputs:
+#    - templateName: structured-swift5
+#      output: Strings.swift
+xcassets:
+  inputs:
+    - Colors.xcassets
+    - Images.xcassets
+  outputs:
+    - templateName: swift5
+      output: Assets.swift

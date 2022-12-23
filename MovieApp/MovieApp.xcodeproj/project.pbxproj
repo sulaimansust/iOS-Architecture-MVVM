@@ -17,6 +17,11 @@
 		4DA4FBAD2954A5440018523C /* MovieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FBAC2954A5440018523C /* MovieAppTests.swift */; };
 		4DA4FBB72954A5440018523C /* MovieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FBB62954A5440018523C /* MovieAppUITests.swift */; };
 		4DA4FBB92954A5440018523C /* MovieAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FBB82954A5440018523C /* MovieAppUITestsLaunchTests.swift */; };
+		4DA4FBD12955FA7B0018523C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA4FBD02955FA7B0018523C /* Colors.xcassets */; };
+		4DA4FBD32955FA8C0018523C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA4FBD22955FA8C0018523C /* Images.xcassets */; };
+		4DA4FBD62955FAB50018523C /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FBD52955FAB50018523C /* Assets.swift */; };
+		4DA4FBD72955FAB50018523C /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FBD52955FAB50018523C /* Assets.swift */; };
+		4DA4FBD82955FAB50018523C /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FBD52955FAB50018523C /* Assets.swift */; };
 		7ABAF9C9FDFBFD996EEDF60E /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518837E551FC0DAD779F4110 /* Pods_MovieApp.framework */; };
 		C21336784CF408133431B55A /* Pods_MovieApp_MovieAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E70F5E68A2F31B40E0674F /* Pods_MovieApp_MovieAppUITests.framework */; };
 		D08EDE6795928789427335D4 /* Pods_MovieAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9294D830B3958328669FFD98 /* Pods_MovieAppTests.framework */; };
@@ -57,6 +62,9 @@
 		4DA4FBB22954A5440018523C /* MovieAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA4FBB62954A5440018523C /* MovieAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppUITests.swift; sourceTree = "<group>"; };
 		4DA4FBB82954A5440018523C /* MovieAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4DA4FBD02955FA7B0018523C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		4DA4FBD22955FA8C0018523C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4DA4FBD52955FAB50018523C /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		518837E551FC0DAD779F4110 /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F177172833E79E19BE6F8A /* Pods-MovieAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieAppTests/Pods-MovieAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		79033B8632333A09E791C2E8 /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,11 +149,11 @@
 		4DA4FB912954A5420018523C /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				4DA4FBCF2955FA230018523C /* Resources */,
 				4DA4FB922954A5420018523C /* AppDelegate.swift */,
 				4DA4FB942954A5420018523C /* SceneDelegate.swift */,
 				4DA4FB962954A5420018523C /* ViewController.swift */,
 				4DA4FB982954A5420018523C /* Main.storyboard */,
-				4DA4FB9E2954A5430018523C /* Assets.xcassets */,
 				4DA4FBA02954A5430018523C /* LaunchScreen.storyboard */,
 				4DA4FBA32954A5430018523C /* Info.plist */,
 				4DA4FB9B2954A5420018523C /* MovieApp.xcdatamodeld */,
@@ -170,6 +178,25 @@
 			path = MovieAppUITests;
 			sourceTree = "<group>";
 		};
+		4DA4FBCF2955FA230018523C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DA4FBD42955FA960018523C /* Generated */,
+				4DA4FB9E2954A5430018523C /* Assets.xcassets */,
+				4DA4FBD02955FA7B0018523C /* Colors.xcassets */,
+				4DA4FBD22955FA8C0018523C /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4DA4FBD42955FA960018523C /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				4DA4FBD52955FAB50018523C /* Assets.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +210,7 @@
 				4DA4FB8D2954A5420018523C /* Resources */,
 				4DA4FBCC2955F5270018523C /* SwiftLint  Autocorrect */,
 				4DA4FBCD2955F7710018523C /* SwiftLint Run Script */,
+				4DA4FBCE2955F9E90018523C /* SwiftGen Run Script */,
 			);
 			buildRules = (
 			);
@@ -284,6 +312,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DA4FBA22954A5430018523C /* LaunchScreen.storyboard in Resources */,
+				4DA4FBD32955FA8C0018523C /* Images.xcassets in Resources */,
+				4DA4FBD12955FA7B0018523C /* Colors.xcassets in Resources */,
 				4DA4FB9F2954A5430018523C /* Assets.xcassets in Resources */,
 				4DA4FB9A2954A5420018523C /* Main.storyboard in Resources */,
 			);
@@ -341,6 +371,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		4DA4FBCE2955F9E90018523C /* SwiftGen Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftGen Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n$PODS_ROOT/SwiftGen/bin/swiftgen\n";
 		};
 		680A87272D7DC534EF767DCB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -418,6 +466,7 @@
 				4DA4FB972954A5420018523C /* ViewController.swift in Sources */,
 				4DA4FB932954A5420018523C /* AppDelegate.swift in Sources */,
 				4DA4FB9D2954A5420018523C /* MovieApp.xcdatamodeld in Sources */,
+				4DA4FBD62955FAB50018523C /* Assets.swift in Sources */,
 				4DA4FB952954A5420018523C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA4FBD72955FAB50018523C /* Assets.swift in Sources */,
 				4DA4FBAD2954A5440018523C /* MovieAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +486,7 @@
 			files = (
 				4DA4FBB92954A5440018523C /* MovieAppUITestsLaunchTests.swift in Sources */,
 				4DA4FBB72954A5440018523C /* MovieAppUITests.swift in Sources */,
+				4DA4FBD82955FAB50018523C /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
