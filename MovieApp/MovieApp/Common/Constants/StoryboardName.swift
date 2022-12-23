@@ -8,4 +8,5 @@
 import Foundation
 enum StoryboardName: String {
     case splash = "SplashScreen"
+    case main = "Main"
 }

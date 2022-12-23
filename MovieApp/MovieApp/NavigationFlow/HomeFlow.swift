@@ -12,24 +12,27 @@ import RxCocoa
 
 class HomeFlow: Flow {
 
-    
+    private lazy var navigationController: UINavigationController = UINavigationController()
+
     var root: Presentable {
-        return rootViewController
-    }
-    
-    private lazy var rootViewController: UINavigationController = {
-        let navigationController = UINavigationController()
-        navigationController.isNavigationBarHidden = true
         return navigationController
-    }()
-    
+    }
     
     func navigate(to step: Step) -> FlowContributors {
         guard let step = step as? AppStep else { return .none }
         
         switch step  {
+        case .movieList:
+            return navigateToMovieList()
         default:
             return .none
         }
+    }
+    
+    private func navigateToMovieList() -> FlowContributors {
+        let viewModel = MovieListViewModel()
+        let viewController = MovieListViewController.instantiate(with: viewModel)
+        self.navigationController.pushViewController(viewController, animated: true)
+        return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewModel))
     }
 }

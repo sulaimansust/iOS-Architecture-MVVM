@@ -19,5 +19,5 @@ enum AppStep: Step {
 
     case splash
     case splashComplete
-    case home
+    case movieList
 }

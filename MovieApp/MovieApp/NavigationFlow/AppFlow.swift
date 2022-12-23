@@ -53,7 +53,7 @@ class AppFlow: Flow {
             self.rootWindow.rootViewController = root
         }
         
-        return .one(flowContributor: .contribute(withNextPresentable: homeFlow, withNextStepper: OneStepper(withSingleStep: AppStep.home)))
+        return .one(flowContributor: .contribute(withNextPresentable: homeFlow, withNextStepper: OneStepper(withSingleStep: AppStep.movieList)))
     }
     
 }
