@@ -22,6 +22,10 @@
 		4DA4FBD62955FAB50018523C /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FBD52955FAB50018523C /* Assets.swift */; };
 		4DA4FBD72955FAB50018523C /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FBD52955FAB50018523C /* Assets.swift */; };
 		4DA4FBD82955FAB50018523C /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FBD52955FAB50018523C /* Assets.swift */; };
+		4DA4FBDB2955FC660018523C /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4DA4FBDA2955FC660018523C /* Moya */; };
+		4DA4FBDD2955FC660018523C /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 4DA4FBDC2955FC660018523C /* RxMoya */; };
+		4DA4FBE02955FCA60018523C /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 4DA4FBDF2955FCA60018523C /* RxFlow */; };
+		4DA4FBE32955FD350018523C /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 4DA4FBE22955FD350018523C /* Reusable */; };
 		7ABAF9C9FDFBFD996EEDF60E /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518837E551FC0DAD779F4110 /* Pods_MovieApp.framework */; };
 		C21336784CF408133431B55A /* Pods_MovieApp_MovieAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E70F5E68A2F31B40E0674F /* Pods_MovieApp_MovieAppUITests.framework */; };
 		D08EDE6795928789427335D4 /* Pods_MovieAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9294D830B3958328669FFD98 /* Pods_MovieAppTests.framework */; };
@@ -78,7 +82,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA4FBE02955FCA60018523C /* RxFlow in Frameworks */,
+				4DA4FBDD2955FC660018523C /* RxMoya in Frameworks */,
+				4DA4FBDB2955FC660018523C /* Moya in Frameworks */,
 				7ABAF9C9FDFBFD996EEDF60E /* Pods_MovieApp.framework in Frameworks */,
+				4DA4FBE32955FD350018523C /* Reusable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +226,10 @@
 			);
 			name = MovieApp;
 			packageProductDependencies = (
+				4DA4FBDA2955FC660018523C /* Moya */,
+				4DA4FBDC2955FC660018523C /* RxMoya */,
+				4DA4FBDF2955FCA60018523C /* RxFlow */,
+				4DA4FBE22955FD350018523C /* Reusable */,
 			);
 			productName = MovieApp;
 			productReference = 4DA4FB8F2954A5420018523C /* MovieApp.app */;
@@ -294,6 +306,9 @@
 			);
 			mainGroup = 4DA4FB862954A5420018523C;
 			packageReferences = (
+				4DA4FBD92955FC660018523C /* XCRemoteSwiftPackageReference "Moya" */,
+				4DA4FBDE2955FCA60018523C /* XCRemoteSwiftPackageReference "RxFlow" */,
+				4DA4FBE12955FD350018523C /* XCRemoteSwiftPackageReference "Reusable" */,
 			);
 			productRefGroup = 4DA4FB902954A5420018523C /* Products */;
 			projectDirPath = "";
@@ -811,6 +826,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4DA4FBD92955FC660018523C /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4DA4FBDE2955FCA60018523C /* XCRemoteSwiftPackageReference "RxFlow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:RxSwiftCommunity/RxFlow.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		4DA4FBE12955FD350018523C /* XCRemoteSwiftPackageReference "Reusable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:AliSoftware/Reusable.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4DA4FBDA2955FC660018523C /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DA4FBD92955FC660018523C /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		4DA4FBDC2955FC660018523C /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DA4FBD92955FC660018523C /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		4DA4FBDF2955FCA60018523C /* RxFlow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DA4FBDE2955FCA60018523C /* XCRemoteSwiftPackageReference "RxFlow" */;
+			productName = RxFlow;
+		};
+		4DA4FBE22955FD350018523C /* Reusable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DA4FBE12955FD350018523C /* XCRemoteSwiftPackageReference "Reusable" */;
+			productName = Reusable;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4DA4FB9B2954A5420018523C /* MovieApp.xcdatamodeld */ = {
