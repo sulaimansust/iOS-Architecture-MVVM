@@ -6,17 +6,48 @@
 //
 
 import UIKit
+import RxSwift
+import RxFlow
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    /// Dispose bag will deallocate all the Rx object when this delegate lifecycle ends..
+    let disposeBag = DisposeBag()
+    /// FlowCoordinatior handle the navigation of a flow ( similar to Coordinator design patter but in Reactive way)
+    var coordinator = FlowCoordinator()
+    /// App flow that will centrally handle the app navigation
+    var appFlow: AppFlow!
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        
+        /// Initializing window and giving navigation control to AppFlow and Coordinator
+        ///
+        
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
+        window?.backgroundColor = .white
+        guard let window = window else { return }
+        
+        /// Setting up FlowCoordinator to control navigation systems
+        /// Setting up log with information of step and flow that's happening inside the app for debug purpose
+        
+        coordinator.rx.didNavigate.subscribe(onNext: { (flow, step) in
+            print("Did navigate to flow = \(flow) with step = \(step)")
+        }).disposed(by: disposeBag)
+        
+        self.appFlow = AppFlow(with: window)
+        
+        coordinator.coordinate(flow: self.appFlow, with: OneStepper(withSingleStep: AppStep.splash))
+        
+        window.makeKeyAndVisible()
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
