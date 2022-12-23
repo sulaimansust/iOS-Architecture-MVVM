@@ -27,9 +27,21 @@ class AppFlow: Flow {
     func navigate(to step: RxFlow.Step) -> RxFlow.FlowContributors {
         guard let step = step as? AppStep else { return .none}
         switch step {
+        case .splash:
+            return navigateToSplashFlow()
         default:
             return .none
         }
+    }
+    
+    private func navigateToSplashFlow() -> FlowContributors {
+        let splashFlow = SplashFlow()
+        
+        Flows.use(splashFlow, when: .ready) { [unowned self] (root) in
+            self.rootWindow.rootViewController = root
+        }
+        
+        return .one(flowContributor: .contribute(withNextPresentable: splashFlow, withNextStepper: OneStepper(withSingleStep: AppStep.splash)))
     }
     
     
