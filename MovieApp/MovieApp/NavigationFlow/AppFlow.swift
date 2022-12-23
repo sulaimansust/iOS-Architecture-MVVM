@@ -29,6 +29,8 @@ class AppFlow: Flow {
         switch step {
         case .splash:
             return navigateToSplashFlow()
+        case .splashComplete:
+            return navigateToHomeFlow()
         default:
             return .none
         }
@@ -44,5 +46,14 @@ class AppFlow: Flow {
         return .one(flowContributor: .contribute(withNextPresentable: splashFlow, withNextStepper: OneStepper(withSingleStep: AppStep.splash)))
     }
     
+    private func navigateToHomeFlow() -> FlowContributors {
+        let homeFlow = HomeFlow()
+        
+        Flows.use(homeFlow, when: .ready) { [unowned self] (root) in
+            self.rootWindow.rootViewController = root
+        }
+        
+        return .one(flowContributor: .contribute(withNextPresentable: homeFlow, withNextStepper: OneStepper(withSingleStep: AppStep.home)))
+    }
     
 }

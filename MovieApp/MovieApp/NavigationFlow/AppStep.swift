@@ -15,6 +15,9 @@ enum AppStep: Step {
     /// AppStep
     /// - Parameter splash: App will navigate to splash screen when this event occurs
     /// - Parameter splashComplete: App will send this event when the splash is complete
+    /// - Parameter home: App will send this event  and thus the app will be navigated back to home..
+
     case splash
     case splashComplete
+    case home
 }

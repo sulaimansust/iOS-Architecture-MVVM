@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4DA4FB932954A5420018523C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FB922954A5420018523C /* AppDelegate.swift */; };
 		4DA4FB952954A5420018523C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FB942954A5420018523C /* SceneDelegate.swift */; };
-		4DA4FB972954A5420018523C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FB962954A5420018523C /* ViewController.swift */; };
 		4DA4FB9A2954A5420018523C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA4FB982954A5420018523C /* Main.storyboard */; };
 		4DA4FB9D2954A5420018523C /* MovieApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FB9B2954A5420018523C /* MovieApp.xcdatamodeld */; };
 		4DA4FB9F2954A5430018523C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA4FB9E2954A5430018523C /* Assets.xcassets */; };
@@ -48,6 +47,8 @@
 		4DA4FC06295626300018523C /* SplashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FC04295626300018523C /* SplashFlow.swift */; };
 		4DA4FC09295628670018523C /* StoryboardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FC08295628670018523C /* StoryboardName.swift */; };
 		4DA4FC0A295628670018523C /* StoryboardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FC08295628670018523C /* StoryboardName.swift */; };
+		4DA4FC0C295629670018523C /* HomeFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FC0B295629670018523C /* HomeFlow.swift */; };
+		4DA4FC0D295629670018523C /* HomeFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FC0B295629670018523C /* HomeFlow.swift */; };
 		7ABAF9C9FDFBFD996EEDF60E /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518837E551FC0DAD779F4110 /* Pods_MovieApp.framework */; };
 		C21336784CF408133431B55A /* Pods_MovieApp_MovieAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E70F5E68A2F31B40E0674F /* Pods_MovieApp_MovieAppUITests.framework */; };
 		D08EDE6795928789427335D4 /* Pods_MovieAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9294D830B3958328669FFD98 /* Pods_MovieAppTests.framework */; };
@@ -77,7 +78,6 @@
 		4DA4FB8F2954A5420018523C /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA4FB922954A5420018523C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DA4FB942954A5420018523C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4DA4FB962954A5420018523C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4DA4FB992954A5420018523C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DA4FB9C2954A5420018523C /* MovieApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieApp.xcdatamodel; sourceTree = "<group>"; };
 		4DA4FB9E2954A5430018523C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +100,7 @@
 		4DA4FC0029561E390018523C /* ViewModel+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel+Storyboard.swift"; sourceTree = "<group>"; };
 		4DA4FC04295626300018523C /* SplashFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlow.swift; sourceTree = "<group>"; };
 		4DA4FC08295628670018523C /* StoryboardName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardName.swift; sourceTree = "<group>"; };
+		4DA4FC0B295629670018523C /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
 		518837E551FC0DAD779F4110 /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F177172833E79E19BE6F8A /* Pods-MovieAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieAppTests/Pods-MovieAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		79033B8632333A09E791C2E8 /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,7 +196,6 @@
 				4DA4FBCF2955FA230018523C /* Resources */,
 				4DA4FB922954A5420018523C /* AppDelegate.swift */,
 				4DA4FB942954A5420018523C /* SceneDelegate.swift */,
-				4DA4FB962954A5420018523C /* ViewController.swift */,
 				4DA4FBA32954A5430018523C /* Info.plist */,
 				4DA4FB9B2954A5420018523C /* MovieApp.xcdatamodeld */,
 			);
@@ -244,6 +244,7 @@
 				4DA4FBE52955FDF40018523C /* AppFlow.swift */,
 				4DA4FBE82955FE490018523C /* AppStep.swift */,
 				4DA4FC04295626300018523C /* SplashFlow.swift */,
+				4DA4FC0B295629670018523C /* HomeFlow.swift */,
 			);
 			path = NavigationFlow;
 			sourceTree = "<group>";
@@ -585,7 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DA4FBFC29561DFC0018523C /* ViewModel.swift in Sources */,
-				4DA4FB972954A5420018523C /* ViewController.swift in Sources */,
+				4DA4FC0C295629670018523C /* HomeFlow.swift in Sources */,
 				4DA4FBE62955FDF40018523C /* AppFlow.swift in Sources */,
 				4DA4FB932954A5420018523C /* AppDelegate.swift in Sources */,
 				4DA4FC0129561E390018523C /* ViewModel+Storyboard.swift in Sources */,
@@ -610,6 +611,7 @@
 				4DA4FBE72955FDF40018523C /* AppFlow.swift in Sources */,
 				4DA4FBF729561D8A0018523C /* SplashViewModel.swift in Sources */,
 				4DA4FBAD2954A5440018523C /* MovieAppTests.swift in Sources */,
+				4DA4FC0D295629670018523C /* HomeFlow.swift in Sources */,
 				4DA4FC0229561E390018523C /* ViewModel+Storyboard.swift in Sources */,
 				4DA4FBF329561D7F0018523C /* SplashViewController.swift in Sources */,
 				4DA4FC06295626300018523C /* SplashFlow.swift in Sources */,
