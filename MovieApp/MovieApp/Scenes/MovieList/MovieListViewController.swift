@@ -11,7 +11,7 @@ import Reusable
 
 class MovieListViewController: UIViewController, StoryboardSceneBased, ViewModelBased {
     var viewModel: MovieListViewModel!
-    static var sceneStoryboard: UIStoryboard = UIStoryboard(name: StoryboardName.main.rawValue, bundle: nil)
+    static var sceneStoryboard: UIStoryboard = UIStoryboard(name: Constants.StoryboardName.main.rawValue, bundle: nil)
     
     var movie: Movie!
     

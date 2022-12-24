@@ -11,7 +11,7 @@ import Reusable
 
 class SplashViewController: UIViewController, StoryboardSceneBased, ViewModelBased {
     var viewModel: SplashViewModel!
-    static let sceneStoryboard: UIStoryboard = UIStoryboard(name: StoryboardName.splash.rawValue, bundle: nil)
+    static let sceneStoryboard: UIStoryboard = UIStoryboard(name: Constants.StoryboardName.splash.rawValue, bundle: nil)
     
     @IBOutlet weak var appTitleLabel: UILabel!
     
