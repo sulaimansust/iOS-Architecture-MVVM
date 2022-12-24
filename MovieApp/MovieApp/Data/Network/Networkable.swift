@@ -7,8 +7,9 @@
 
 import Foundation
 import Moya
+import RxSwift
 
 protocol Networkable {
     var provider: MoyaProvider<MovieAPI> { get }
-    func getMovie(keyword: String, page: Int, type: String, completion: ([Movie]?, Error?) -> ())
+    func getMovies(keyword: String, page: Int, type: String) -> Single<[Movie]>
 }
