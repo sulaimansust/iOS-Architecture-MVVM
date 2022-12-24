@@ -1,4 +1,3 @@
-input_dir: MovieApp/Resources
 output_dir: MovieApp/Resources/Generated
 
 #strings:
@@ -8,8 +7,8 @@ output_dir: MovieApp/Resources/Generated
 #      output: Strings.swift
 xcassets:
   inputs:
-    - Colors.xcassets
-    - Images.xcassets
+    - MovieApp/Resources/Colors.xcassets
+    - MovieApp/Resources/Images/Images.xcassets
   outputs:
     - templateName: swift5
       output: Assets.swift
