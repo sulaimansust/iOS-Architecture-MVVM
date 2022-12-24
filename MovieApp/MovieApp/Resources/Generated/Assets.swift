@@ -29,6 +29,8 @@ internal enum Asset {
     internal static let gradientBlueLight = ColorAsset(name: "gradientBlueLight")
     internal static let gradientBrownDark = ColorAsset(name: "gradientBrownDark")
     internal static let gradientBrownLight = ColorAsset(name: "gradientBrownLight")
+    internal static let gradientCeriseRed = ColorAsset(name: "gradientCeriseRed")
+    internal static let gradientFroly = ColorAsset(name: "gradientFroly")
     internal static let gradientPinkDark = ColorAsset(name: "gradientPinkDark")
     internal static let gradientPinkLight = ColorAsset(name: "gradientPinkLight")
     internal static let gradientTarquoiseDark = ColorAsset(name: "gradientTarquoiseDark")
@@ -36,6 +38,8 @@ internal enum Asset {
     internal static let gradientVioletDark = ColorAsset(name: "gradientVioletDark")
     internal static let gradientVioletLight = ColorAsset(name: "gradientVioletLight")
     internal static let splashRed = ColorAsset(name: "splashRed")
+    internal static let subTitleWhite = ColorAsset(name: "subTitleWhite")
+    internal static let titleWhite = ColorAsset(name: "titleWhite")
   }
   internal enum Images {
     internal static let poster = ImageAsset(name: "poster")

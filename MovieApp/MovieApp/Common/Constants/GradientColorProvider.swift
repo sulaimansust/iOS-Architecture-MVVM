@@ -30,6 +30,9 @@ class GradientColorProvider {
         gradientsColors.append((
             Asset.Colors.gradientTarquoiseLight.color,
             Asset.Colors.gradientTarquoiseDark.color))
+        gradientsColors.append((
+            Asset.Colors.gradientFroly.color,
+            Asset.Colors.gradientCeriseRed.color))
     }
     
     func getGradientColor(at position: Int) ->  (top: UIColor,bottom: UIColor) {
