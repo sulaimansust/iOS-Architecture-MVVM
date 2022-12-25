@@ -41,6 +41,7 @@ class MovieListViewController: UIViewController, StoryboardSceneBased, ViewModel
             .subscribe(onNext: { [weak self] movies in
                 guard let self = self else { return }
                 self.movies.append(contentsOf: movies)
+                print(movies)
                 self.tableView.reloadData()
             }).disposed(by: disposeBag)
     }

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Reusable
+import Kingfisher
 
 class MovieItemCell: UITableViewCell, NibReusable {
     @IBOutlet weak var rootView: UIView!
@@ -19,6 +20,13 @@ class MovieItemCell: UITableViewCell, NibReusable {
     func updateCellUI(with movieData: Movie) {
         titleLabel.text = movieData.title
         typeLabel.text = movieData.type
+        if movieData.poster.isValidURL {
+            posterImageView.kf.setImage(with: movieData.poster.asURL)
+        }
+        /// Putting a dummy for rating for now. As the search api doesn't provide ratings.
+        /// Fetching ratings in this page is possbile with another api call, don't wanna add complexity for now..
+        ///
+        ratingLabel.text = "\(Double.random(in: 2..<5).rounded(toPlaces: 1))"
     }
     
     func updateCellBackground(colors: (UIColor,UIColor)) {
