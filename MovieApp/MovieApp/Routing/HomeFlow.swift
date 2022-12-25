@@ -25,7 +25,7 @@ class HomeFlow: Flow {
         switch step  {
         case .movieList:
             return navigateToMovieList()
-        case .movieDetials(let info):
+        case .movieDetails(let info):
             return navigateToMovieDetails(with: info)
         default:
             return .none
