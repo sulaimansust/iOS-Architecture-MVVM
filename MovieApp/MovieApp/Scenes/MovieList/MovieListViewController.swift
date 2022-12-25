@@ -8,27 +8,41 @@
 import Foundation
 import UIKit
 import Reusable
+import RxSwift
+import RxCocoa
 
 class MovieListViewController: UIViewController, StoryboardSceneBased, ViewModelBased {
+    // Variables from protocols, must give implementation
     var viewModel: MovieListViewModel!
     static var sceneStoryboard: UIStoryboard = UIStoryboard(name: Constants.StoryboardName.main.rawValue, bundle: nil)
-    
-    var movie: Movie!
-    
-    @IBOutlet weak var tableView: UITableView!
+        
+    @IBOutlet private weak var tableView: UITableView!
+    var movies: [Movie] = []
+    private var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepareTableView()
         self.title = "Thor Movies"
-        movie = Movie(title: "Thor", year: "2022", imdbID: "tt43234", type: "Movie", poster: "No poster")
-        
+        prepareTableView()
+        bindViewModel()
+        self.viewModel.getMovies(keyword: "Thor", page: 1, type: "movie")
     }
     
     private func prepareTableView() {
         self.tableView.register(cellType: MovieItemCell.self)
         self.tableView.automaticallyAdjustsScrollIndicatorInsets = false
         self.tableView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    private func bindViewModel() {
+        self.viewModel
+            .movies
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] movies in
+                guard let self = self else { return }
+                self.movies.append(contentsOf: movies)
+                self.tableView.reloadData()
+            }).disposed(by: disposeBag)
     }
     
     

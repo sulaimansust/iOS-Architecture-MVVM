@@ -10,19 +10,25 @@ import UIKit
 
 
 extension MovieListViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell: MovieItemCell = tableView.dequeueReusableCell(for: indexPath)
-        let color = GradientColorProvider.instance.getGradientColor(at: indexPath.section)
+        
+        let movie = movies[indexPath.section]
         cell.updateCellUI(with: movie)
         cell.layoutIfNeeded()
+        // Set background gradient colors
+        let color = GradientColorProvider.instance.getGradientColor(at: indexPath.section)
         cell.updateCellBackground(colors: color)
+        
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 15
+        return self.movies.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

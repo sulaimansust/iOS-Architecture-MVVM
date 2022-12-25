@@ -10,8 +10,8 @@ import Moya
 import RxMoya
 import RxSwift
 
-class NetworkManager: Networkable {
-    
+class NetworkingManager: Networking {
+
     
     internal let provider: MoyaProvider<MovieAPI>
     private let disposeBag = DisposeBag()

@@ -9,7 +9,7 @@ import Foundation
 
 
 // MARK: - Movie
-struct Movie: Codable {
+public struct Movie: Codable {
     let title, year, imdbID: String
     let type: String
     let poster: String

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import RxFlow
 import RxCocoa
+import Moya
 
 class HomeFlow: Flow {
 
@@ -30,9 +31,19 @@ class HomeFlow: Flow {
     }
     
     private func navigateToMovieList() -> FlowContributors {
-        let viewModel = MovieListViewModel()
+        // Initializing network manager
+        let provider = MoyaProvider<MovieAPI>()
+        let networkManager = NetworkingManager(provider: provider)
+        
+        // Creating ViewModel and Services - dependency
+        let httpMovieService = HTTPMovieService(provider: networkManager)
+        let cachedMovieService = CachedMovieService()
+        let viewModel = MovieListViewModel(httpMovieService: httpMovieService, cachedMovieService: cachedMovieService)
+        
+        // Creating View and pushing to navigation controller
         let viewController = MovieListViewController.instantiate(with: viewModel)
         self.navigationController.pushViewController(viewController, animated: true)
+        
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewModel))
     }
 }
