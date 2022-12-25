@@ -25,8 +25,8 @@ class HomeFlow: Flow {
         switch step  {
         case .movieList:
             return navigateToMovieList()
-        case .movieDetials(let movie):
-            return navigateToMovieDetails(with: movie)
+        case .movieDetials(let info):
+            return navigateToMovieDetails(with: info)
         default:
             return .none
         }
@@ -49,14 +49,14 @@ class HomeFlow: Flow {
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewModel))
     }
     
-    private func navigateToMovieDetails(with movie: Movie) -> FlowContributors {
+    private func navigateToMovieDetails(with info: MovieInfo) -> FlowContributors {
         // Initializing network manager
         let provider = MoyaProvider<MovieAPI>()
         let networkManager = NetworkingManager(provider: provider)
         
         // Creating ViewModel and Services - dependency
         let httpMovieService = HTTPMovieService(provider: networkManager)
-        let viewModel = MovieDetailsViewModel(movie: movie, service: httpMovieService)
+        let viewModel = MovieDetailsViewModel(movieInfo: info, service: httpMovieService)
         
         let viewController = MovieDetailsViewController.instantiate(with: viewModel)
         self.navigationController.pushViewController(viewController, animated: true)

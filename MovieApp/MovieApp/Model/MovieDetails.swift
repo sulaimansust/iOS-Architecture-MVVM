@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - MovieDetails
-struct MovieDetails: Codable {
+public struct MovieDetails: Codable {
     let title, year, rated, released: String
     let runtime, genre, director, writer: String
     let actors, plot, language, country: String

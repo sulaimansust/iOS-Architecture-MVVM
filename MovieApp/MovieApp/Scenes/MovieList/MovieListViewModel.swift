@@ -9,6 +9,7 @@ import Foundation
 import RxFlow
 import RxCocoa
 import RxSwift
+import UIKit
 
 class MovieListViewModel: ViewModel {
     
@@ -65,7 +66,7 @@ class MovieListViewModel: ViewModel {
 }
 
 extension MovieListViewModel: Stepper {
-    func navigateToMovieDetails(movie: Movie) {
-        self.steps.accept(AppStep.movieDetials(movie: movie))
+    func navigateToMovieDetails(with info: MovieInfo ) {
+        self.steps.accept(AppStep.movieDetials(info: info))
     }
 }
