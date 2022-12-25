@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="132" y="-34"/>
         </scene>
-        <!--Movie Detail View Controller-->
+        <!--Movie Details View Controller-->
         <scene sceneID="bke-1O-Ix3">
             <objects>
-                <viewController storyboardIdentifier="MovieDetailViewController" id="JDa-jM-5O9" customClass="MovieDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetailsViewController" id="JDa-jM-5O9" customClass="MovieDetailsViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bdx-r0-5hl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -52,7 +52,7 @@ class HomeFlow: Flow {
     private func navigateToMovieDetails(with imdbId: String) -> FlowContributors {
         
         let viewModel = MovieDetailsViewModel(imdbId: imdbId)
-        let viewController = MovieDetialsViewController.instantiate(with: viewModel)
+        let viewController = MovieDetailsViewController.instantiate(with: viewModel)
         self.navigationController.pushViewController(viewController, animated: true)
         
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewModel))
