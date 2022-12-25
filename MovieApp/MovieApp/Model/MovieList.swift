@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 // MARK: - MovieList
 struct MovieList: Codable {
     let movies: [Movie]

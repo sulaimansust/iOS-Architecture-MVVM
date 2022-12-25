@@ -132,6 +132,9 @@
 		4DA4FC922957E4B80018523C /* MovieDetialsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FC912957E4B80018523C /* MovieDetialsViewModel.swift */; };
 		4DA4FC932957E4B80018523C /* MovieDetialsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FC912957E4B80018523C /* MovieDetialsViewModel.swift */; };
 		4DA4FC942957E4B80018523C /* MovieDetialsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FC912957E4B80018523C /* MovieDetialsViewModel.swift */; };
+		4DA4FC962957E9B70018523C /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FC952957E9B70018523C /* MovieDetails.swift */; };
+		4DA4FC972957E9B70018523C /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FC952957E9B70018523C /* MovieDetails.swift */; };
+		4DA4FC982957E9B70018523C /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FC952957E9B70018523C /* MovieDetails.swift */; };
 		7ABAF9C9FDFBFD996EEDF60E /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518837E551FC0DAD779F4110 /* Pods_MovieApp.framework */; };
 		C21336784CF408133431B55A /* Pods_MovieApp_MovieAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E70F5E68A2F31B40E0674F /* Pods_MovieApp_MovieAppUITests.framework */; };
 		D08EDE6795928789427335D4 /* Pods_MovieAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9294D830B3958328669FFD98 /* Pods_MovieAppTests.framework */; };
@@ -212,6 +215,7 @@
 		4DA4FC882957E3DB0018523C /* Double+Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Round.swift"; sourceTree = "<group>"; };
 		4DA4FC8D2957E4AF0018523C /* MovieDetialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetialsViewController.swift; sourceTree = "<group>"; };
 		4DA4FC912957E4B80018523C /* MovieDetialsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetialsViewModel.swift; sourceTree = "<group>"; };
+		4DA4FC952957E9B70018523C /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
 		518837E551FC0DAD779F4110 /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F177172833E79E19BE6F8A /* Pods-MovieAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieAppTests/Pods-MovieAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		79033B8632333A09E791C2E8 /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -465,6 +469,7 @@
 			children = (
 				4DA4FC25295753C40018523C /* Movie.swift */,
 				4DA4FC29295754960018523C /* MovieList.swift */,
+				4DA4FC952957E9B70018523C /* MovieDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -847,6 +852,7 @@
 				4DA4FC3329575B500018523C /* GradientColorProvider.swift in Sources */,
 				4DA4FC4529577B5A0018523C /* ApiPath.swift in Sources */,
 				4DA4FC37295778360018523C /* MovieListViewController+UITableView.swift in Sources */,
+				4DA4FC962957E9B70018523C /* MovieDetails.swift in Sources */,
 				4DA4FBE92955FE490018523C /* AppStep.swift in Sources */,
 				4DA4FB952954A5420018523C /* SceneDelegate.swift in Sources */,
 				4DA4FC7A2957D1580018523C /* CachedMovieService.swift in Sources */,
@@ -890,6 +896,7 @@
 				4DA4FBE72955FDF40018523C /* AppFlow.swift in Sources */,
 				4DA4FC232957463B0018523C /* MovieItemCell.swift in Sources */,
 				4DA4FC52295781760018523C /* AppConfigurationProvider.swift in Sources */,
+				4DA4FC972957E9B70018523C /* MovieDetails.swift in Sources */,
 				4DA4FC8F2957E4AF0018523C /* MovieDetialsViewController.swift in Sources */,
 				4DA4FC2B295754960018523C /* MovieList.swift in Sources */,
 				4DA4FC5B2957840B0018523C /* Constants+HTTPHeaderFields.swift in Sources */,
@@ -923,6 +930,7 @@
 				4DA4FC30295756130018523C /* UIView+Gradient.swift in Sources */,
 				4DA4FC6C2957A5650018523C /* NetworkError.swift in Sources */,
 				4DA4FC4329577B1F0018523C /* MovieAPI.swift in Sources */,
+				4DA4FC982957E9B70018523C /* MovieDetails.swift in Sources */,
 				4DA4FC53295781760018523C /* AppConfigurationProvider.swift in Sources */,
 				4DA4FC6829579D410018523C /* NetworkingManager.swift in Sources */,
 				4DA4FC4B29577BA90018523C /* MovieAPI+TargetType.swift in Sources */,
