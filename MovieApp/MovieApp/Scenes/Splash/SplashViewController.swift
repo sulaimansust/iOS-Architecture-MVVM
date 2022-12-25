@@ -21,7 +21,7 @@ class SplashViewController: UIViewController, StoryboardSceneBased, ViewModelBas
         UIView.transition(with: self.appTitleLabel, duration: 0.5, options: .transitionCurlDown, animations: {
             self.appTitleLabel.isHidden = false
         }, completion: { _ in
-            Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: { [weak self] _ in
+            Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { [weak self] _ in
                 self?.viewModel.finishSplash()
             })
         })

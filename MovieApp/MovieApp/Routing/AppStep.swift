@@ -20,4 +20,5 @@ enum AppStep: Step {
     case splash
     case splashComplete
     case movieList
+    case movieDetials(imdbId: String)
 }

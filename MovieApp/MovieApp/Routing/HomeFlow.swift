@@ -25,6 +25,8 @@ class HomeFlow: Flow {
         switch step  {
         case .movieList:
             return navigateToMovieList()
+        case .movieDetials(let imdbId):
+            return navigateToMovieDetails(with: imdbId)
         default:
             return .none
         }
@@ -45,5 +47,15 @@ class HomeFlow: Flow {
         self.navigationController.pushViewController(viewController, animated: true)
         
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewModel))
+    }
+    
+    private func navigateToMovieDetails(with imdbId: String) -> FlowContributors {
+        
+        let viewModel = MovieDetailsViewModel(imdbId: imdbId)
+        let viewController = MovieDetialsViewController.instantiate(with: viewModel)
+        self.navigationController.pushViewController(viewController, animated: true)
+        
+        return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewModel))
+
     }
 }

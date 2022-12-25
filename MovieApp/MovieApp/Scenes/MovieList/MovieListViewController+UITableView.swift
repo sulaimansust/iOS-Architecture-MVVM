@@ -48,7 +48,9 @@ extension MovieListViewController: UITableViewDataSource {
 
 extension MovieListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie = self.movies[indexPath.section]
         tableView.deselectRow(at: indexPath, animated: true)
+        self.viewModel.navigateToMovieDetails(imdbId: movie.imdbID)
     }
     
 }
