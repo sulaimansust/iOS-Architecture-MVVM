@@ -65,7 +65,7 @@ class MovieListViewModel: ViewModel {
 }
 
 extension MovieListViewModel: Stepper {
-    func navigateToMovieDetails(imdbId: String) {
-        self.steps.accept(AppStep.movieDetials(imdbId: imdbId))
+    func navigateToMovieDetails(movie: Movie) {
+        self.steps.accept(AppStep.movieDetials(movie: movie))
     }
 }

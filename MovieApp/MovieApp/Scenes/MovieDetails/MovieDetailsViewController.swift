@@ -35,6 +35,7 @@ class MovieDetailsViewController: UIViewController, StoryboardSceneBased, ViewMo
     override func viewDidLoad() {
         super.viewDidLoad()
         self.actorsCollectionView.register(cellType: ActorCellCollectionViewCell.self)
+        self.viewModel.getMovieDetails()
     }
 }
 
@@ -57,4 +58,5 @@ extension MovieDetailsViewController: UICollectionViewDelegate {
 extension MovieDetailsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100, height: collectionView.frame.height)
-    }}
+    }
+}

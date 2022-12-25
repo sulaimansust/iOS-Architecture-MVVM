@@ -10,4 +10,5 @@ import RxSwift
 
 protocol MovieSearchable {
     func getMovies(keyword: String, page: Int, type: String) -> Single<[Movie]>
+    func getMovieDetails(imdbId: String) -> Single<MovieDetails>
 }

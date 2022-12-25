@@ -20,12 +20,16 @@ extension MovieAPI: TargetType{
         switch self {
         case .getMovie:
             return ""
+        case .getMovieDetails:
+            return ""
         }
     }
 
     var method: Moya.Method {
         switch self {
         case .getMovie:
+            return .get
+        case .getMovieDetails:
             return .get
         }
     }
@@ -40,6 +44,11 @@ extension MovieAPI: TargetType{
                 "page": page,
                 "type": type
             ], encoding:   URLEncoding.queryString)
+        case .getMovieDetails(let imdbId):
+            return .requestParameters(parameters: [
+                "apikey": apiKey,
+                "i": imdbId
+            ], encoding: URLEncoding.queryString)
         }
     }
 

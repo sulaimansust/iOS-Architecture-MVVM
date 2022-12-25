@@ -12,4 +12,5 @@ import RxSwift
 protocol Networking {
     var provider: MoyaProvider<MovieAPI> { get }
     func getMovies(keyword: String, page: Int, type: String) -> Single<[Movie]>
+    func getMovieDetails(imdbId: String) -> Single<MovieDetails>
 }

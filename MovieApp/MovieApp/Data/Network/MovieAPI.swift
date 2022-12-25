@@ -9,4 +9,5 @@ import Foundation
 
 enum MovieAPI {
     case getMovie(keyword: String, page: Int, type: String)
+    case getMovieDetails(imdbId: String)
 }

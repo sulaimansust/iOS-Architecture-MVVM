@@ -20,5 +20,9 @@ class HTTPMovieService: MovieSearchable {
         return self.networkProvider.getMovies(keyword: keyword, page: page, type: type)
     }
     
+    func getMovieDetails(imdbId: String) -> Single<MovieDetails> {
+        return self.networkProvider.getMovieDetails(imdbId: imdbId)
+    }
+    
     
 }

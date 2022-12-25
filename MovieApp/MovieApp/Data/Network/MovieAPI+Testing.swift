@@ -14,6 +14,8 @@ extension MovieAPI {
         case .getMovie:
             //TODO: - Send proper file name later
             return stubbedResponse("file_name")
+        default:
+            return Data()
         }
     }
     
