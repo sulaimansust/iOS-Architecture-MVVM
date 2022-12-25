@@ -22,7 +22,7 @@ class MovieListViewController: UIViewController, StoryboardSceneBased, ViewModel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Thor Movies"
+        self.title = "Movies"
         prepareTableView()
         bindViewModel()
         self.viewModel.getMovies(keyword: "Thor", page: 1, type: "movie")
