@@ -79,6 +79,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        /// Core data will save data when app goes background
+        AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
+
     }
 
 

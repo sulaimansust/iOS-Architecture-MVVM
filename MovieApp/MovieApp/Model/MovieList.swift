@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - MovieList
-struct MovieList: Codable {
+public struct MovieList: Codable {
     let movies: [Movie]
     let totalResults, response: String
 

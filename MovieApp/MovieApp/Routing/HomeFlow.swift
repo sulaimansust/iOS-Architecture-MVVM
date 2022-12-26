@@ -36,10 +36,12 @@ class HomeFlow: Flow {
         // Initializing network manager
         let provider = MoyaProvider<MovieAPI>()
         let networkManager = NetworkingManager(provider: provider)
+        let stack = AppDelegate.sharedAppDelegate.coreDataStack
+        let localDataManager = LocalDataManager(movieDataStack: stack)
         
         // Creating ViewModel and Services - dependency
         let httpMovieService = HTTPMovieService(provider: networkManager)
-        let cachedMovieService = CachedMovieService()
+        let cachedMovieService = CachedMovieService(localDataManager: localDataManager)
         let viewModel = MovieListViewModel(httpMovieService: httpMovieService, cachedMovieService: cachedMovieService)
         
         // Creating View and pushing to navigation controller

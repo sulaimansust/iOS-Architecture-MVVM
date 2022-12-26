@@ -47,9 +47,13 @@ class MovieListViewModel: ViewModel {
             .searchMovies(keyword: keyword, page: page, type: type)
             .subscribe(onSuccess: { [weak self] movies in
                 self?.moviesSubject.onNext(movies)
+                self?.save(movies: movies)
             }, onFailure: { [weak self] error in
-                self?.errorSubject.onNext(error)
+                // We will not show an error right now, instead fetch data from local storage
+//                self?.errorSubject.onNext(error)
+                self?.fetchStoredMovies()
             }).disposed(by: disposeBag)
+
     }
     
     func fetchStoredMovies() {
@@ -61,6 +65,10 @@ class MovieListViewModel: ViewModel {
                 self?.errorSubject.onNext(error)
             })
             .disposed(by: disposeBag)
+    }
+    
+    private func save(movies: [Movie]) {
+        cachedMovieService.save(movies: movies)
     }
     
 }

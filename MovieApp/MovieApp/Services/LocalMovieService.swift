@@ -10,4 +10,5 @@ import RxSwift
 
 public protocol LocalMovieService {
     func fetchMovies() -> Observable<[Movie]>
+    func save(movies: [Movie])
 }
