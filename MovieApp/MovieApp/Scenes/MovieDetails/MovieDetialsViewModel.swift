@@ -16,7 +16,7 @@ class MovieDetailsViewModel: ViewModel {
     /// Will hold the observable/publishsubject object and clear the memory when no use..
     private let disposeBag = DisposeBag()
     let movieInfo: MovieInfo
-    private let movieService: MovieSearchable
+    private let movieService: MovieApiService
     
     // Will emit event to all the subscriber, will provide moviedetails when fetched
     private let movieDetailsSubject: PublishSubject<MovieDetails> = PublishSubject()
@@ -32,7 +32,7 @@ class MovieDetailsViewModel: ViewModel {
         return errorSubject.asObservable()
     }
     
-    init(movieInfo: MovieInfo, service: MovieSearchable) {
+    init(movieInfo: MovieInfo, service: MovieApiService) {
         self.movieInfo = movieInfo
         self.movieService = service
     }

@@ -10,7 +10,7 @@ import RxSwift
 
 /// CachedMovieService - Will provide previously stored movies when the network is not available
 
-public class CachedMovieService: MovieFetchable {
+public class CachedMovieService: LocalMovieService {
     //TODO: - Implement this method later..
     public func fetchMovies() -> Observable<[Movie]> {
         return Observable.empty()

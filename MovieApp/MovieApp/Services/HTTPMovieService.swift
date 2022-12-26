@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 /// HTTPMovieService - Will provide list of Movies from the OMBD movie database ..
-class HTTPMovieService: MovieSearchable {
+class HTTPMovieService: MovieApiService {
     
     private let networkProvider: NetworkingManager
     

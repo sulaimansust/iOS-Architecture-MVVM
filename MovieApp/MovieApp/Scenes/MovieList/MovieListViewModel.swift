@@ -14,8 +14,8 @@ import UIKit
 class MovieListViewModel: ViewModel {
     
     // Necessary Services
-    private let httpMovieService: MovieSearchable
-    private let cachedMovieService: MovieFetchable
+    private let httpMovieService: MovieApiService
+    private let cachedMovieService: LocalMovieService
     
     // Will take care of memory freeing the reactive objects
     private var disposeBag = DisposeBag()
@@ -36,7 +36,7 @@ class MovieListViewModel: ViewModel {
         return errorSubject.asObservable()
     }
     
-    init(httpMovieService: MovieSearchable, cachedMovieService: MovieFetchable) {
+    init(httpMovieService: MovieApiService, cachedMovieService: LocalMovieService) {
         self.httpMovieService = httpMovieService
         self.cachedMovieService = cachedMovieService
     }

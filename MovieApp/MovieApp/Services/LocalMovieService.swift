@@ -8,6 +8,6 @@
 import Foundation
 import RxSwift
 
-public protocol MovieFetchable {
+public protocol LocalMovieService {
     func fetchMovies() -> Observable<[Movie]>
 }
