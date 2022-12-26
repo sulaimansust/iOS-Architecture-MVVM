@@ -16,7 +16,7 @@ class HTTPMovieService: MovieApiService {
         self.networkProvider = provider
     }
     
-    func getMovies(keyword: String, page: Int, type: String) -> Single<[Movie]> {
+    func searchMovies(keyword: String, page: Int, type: String) -> Single<[Movie]> {
         return self.networkProvider.getMovies(keyword: keyword, page: page, type: type)
     }
     

@@ -371,6 +371,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		4D81AADD2959D24000784B7B /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				4D81AAC62959440F00784B7B /* Model */,
+				4D81AAC72959449100784B7B /* ViewModel */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
 		4DA4FB862954A5420018523C = {
 			isa = PBXGroup;
 			children = (
@@ -412,8 +421,7 @@
 		4DA4FBAB2954A5440018523C /* MovieAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				4D81AAC72959449100784B7B /* ViewModel */,
-				4D81AAC62959440F00784B7B /* Model */,
+				4D81AADD2959D24000784B7B /* Unit */,
 				4D81AABF2959412C00784B7B /* jsons */,
 				4DA4FBAC2954A5440018523C /* MovieAppTests.swift */,
 			);

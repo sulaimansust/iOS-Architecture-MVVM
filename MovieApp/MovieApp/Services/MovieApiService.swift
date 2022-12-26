@@ -9,6 +9,6 @@ import Foundation
 import RxSwift
 
 protocol MovieApiService {
-    func getMovies(keyword: String, page: Int, type: String) -> Single<[Movie]>
+    func searchMovies(keyword: String, page: Int, type: String) -> Single<[Movie]>
     func getMovieDetails(imdbId: String) -> Single<MovieDetails>
 }

@@ -44,7 +44,7 @@ class MovieListViewModel: ViewModel {
     func getMovies(keyword: String, page: Int, type: String) {
 
         self.httpMovieService
-            .getMovies(keyword: keyword, page: page, type: type)
+            .searchMovies(keyword: keyword, page: page, type: type)
             .subscribe(onSuccess: { [weak self] movies in
                 self?.moviesSubject.onNext(movies)
             }, onFailure: { [weak self] error in
