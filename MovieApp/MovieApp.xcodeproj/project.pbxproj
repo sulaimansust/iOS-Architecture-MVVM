@@ -73,6 +73,18 @@
 		4D81AB212959FFAE00784B7B /* CDMovieDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AB152959FFAE00784B7B /* CDMovieDetails+CoreDataProperties.swift */; };
 		4D81AB26295A018D00784B7B /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AB25295A018D00784B7B /* LocalDataManager.swift */; };
 		4D81AB27295A018D00784B7B /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AB25295A018D00784B7B /* LocalDataManager.swift */; };
+		4D81AB29295A453700784B7B /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AB25295A018D00784B7B /* LocalDataManager.swift */; };
+		4D81AB2A295A454A00784B7B /* MovieDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AAEB2959F82700784B7B /* MovieDataStack.swift */; };
+		4D81AB2B295A454B00784B7B /* MovieDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AAEB2959F82700784B7B /* MovieDataStack.swift */; };
+		4D81AB2C295A456300784B7B /* HomeFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FC0B295629670018523C /* HomeFlow.swift */; };
+		4D81AB2D295A457700784B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FB922954A5420018523C /* AppDelegate.swift */; };
+		4D81AB2E295A457700784B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FB922954A5420018523C /* AppDelegate.swift */; };
+		4D81AB2F295A45F100784B7B /* CDMovieDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AB152959FFAE00784B7B /* CDMovieDetails+CoreDataProperties.swift */; };
+		4D81AB30295A45F400784B7B /* CDMovieDetails+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AB142959FFAE00784B7B /* CDMovieDetails+CoreDataClass.swift */; };
+		4D81AB31295A45F700784B7B /* CDMovie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AB132959FFAE00784B7B /* CDMovie+CoreDataProperties.swift */; };
+		4D81AB32295A45FA00784B7B /* CDMovie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AB122959FFAE00784B7B /* CDMovie+CoreDataClass.swift */; };
+		4D81AB33295A45FC00784B7B /* CDRating+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AB112959FFAE00784B7B /* CDRating+CoreDataProperties.swift */; };
+		4D81AB34295A45FF00784B7B /* CDRating+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AB102959FFAE00784B7B /* CDRating+CoreDataClass.swift */; };
 		4DA4FB932954A5420018523C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FB922954A5420018523C /* AppDelegate.swift */; };
 		4DA4FB952954A5420018523C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FB942954A5420018523C /* SceneDelegate.swift */; };
 		4DA4FB9A2954A5420018523C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA4FB982954A5420018523C /* Main.storyboard */; };
@@ -1003,6 +1015,7 @@
 				4DA4FC7B2957D1580018523C /* CachedMovieService.swift in Sources */,
 				4DA4FC772957B0B10018523C /* HTTPMovieService.swift in Sources */,
 				4DA4FBD72955FAB50018523C /* Assets.swift in Sources */,
+				4D81AB2A295A454A00784B7B /* MovieDataStack.swift in Sources */,
 				4DA4FC862957E0D30018523C /* String+URL.swift in Sources */,
 				4DA4FC0A295628670018523C /* Constants+StoryboardName.swift in Sources */,
 				4D81AB1F2959FFAE00784B7B /* CDMovieDetails+CoreDataClass.swift in Sources */,
@@ -1016,6 +1029,7 @@
 				4D81AAE22959D30700784B7B /* MockCachedMovieService.swift in Sources */,
 				4DA4FBE72955FDF40018523C /* AppFlow.swift in Sources */,
 				4D81AABC29593E6500784B7B /* MovieListTests.swift in Sources */,
+				4D81AB2D295A457700784B7B /* AppDelegate.swift in Sources */,
 				4D81AAE92959D5A500784B7B /* LocalMovieServiceTests.swift in Sources */,
 				4DA4FC232957463B0018523C /* MovieItemCell.swift in Sources */,
 				4D81A9FC295895E700784B7B /* RoundedImageView.swift in Sources */,
@@ -1066,8 +1080,11 @@
 				4DA4FC8B2957E3DB0018523C /* Double+Round.swift in Sources */,
 				4DA4FC30295756130018523C /* UIView+Gradient.swift in Sources */,
 				4DA4FC6C2957A5650018523C /* NetworkError.swift in Sources */,
+				4D81AB33295A45FC00784B7B /* CDRating+CoreDataProperties.swift in Sources */,
 				4DA4FC4329577B1F0018523C /* MovieAPI.swift in Sources */,
 				4DA4FC982957E9B70018523C /* MovieDetails.swift in Sources */,
+				4D81AB2F295A45F100784B7B /* CDMovieDetails+CoreDataProperties.swift in Sources */,
+				4D81AB32295A45FA00784B7B /* CDMovie+CoreDataClass.swift in Sources */,
 				4DA4FC53295781760018523C /* AppConfigurationProvider.swift in Sources */,
 				4DA4FC6829579D410018523C /* NetworkingManager.swift in Sources */,
 				4DA4FC4B29577BA90018523C /* MovieAPI+TargetType.swift in Sources */,
@@ -1082,19 +1099,26 @@
 				4D81AA88295936CF00784B7B /* Constants+StoryboardName.swift in Sources */,
 				4DA4FBB72954A5440018523C /* MovieAppUITests.swift in Sources */,
 				4DA4FC6429579C220018523C /* Networking.swift in Sources */,
+				4D81AB34295A45FF00784B7B /* CDRating+CoreDataClass.swift in Sources */,
 				4DA4FC39295778360018523C /* MovieListViewController+UITableView.swift in Sources */,
 				4D81AA852959368C00784B7B /* AppStep.swift in Sources */,
+				4D81AB2E295A457700784B7B /* AppDelegate.swift in Sources */,
+				4D81AB2C295A456300784B7B /* HomeFlow.swift in Sources */,
 				4DA4FBD82955FAB50018523C /* Assets.swift in Sources */,
 				4DA4FBFE29561DFC0018523C /* ViewModel.swift in Sources */,
 				4DA4FC4729577B5A0018523C /* ApiPath.swift in Sources */,
+				4D81AB29295A453700784B7B /* LocalDataManager.swift in Sources */,
 				4DA4FC242957463B0018523C /* MovieItemCell.swift in Sources */,
+				4D81AB31295A45F700784B7B /* CDMovie+CoreDataProperties.swift in Sources */,
 				4DA4FBF429561D7F0018523C /* SplashViewController.swift in Sources */,
 				4D81AA87295936C200784B7B /* MovieListViewModel.swift in Sources */,
 				4DA4FC2C295754960018523C /* MovieList.swift in Sources */,
 				4D81AA0A2958F01E00784B7B /* StringFormatHelper.swift in Sources */,
+				4D81AB2B295A454B00784B7B /* MovieDataStack.swift in Sources */,
 				4DA4FC782957B0B10018523C /* HTTPMovieService.swift in Sources */,
 				4DA4FC802957D95E0018523C /* LocalMovieService.swift in Sources */,
 				4DA4FC702957AA690018523C /* MovieAPI+Testing.swift in Sources */,
+				4D81AB30295A45F400784B7B /* CDMovieDetails+CoreDataClass.swift in Sources */,
 				4D81A9FD295895E700784B7B /* RoundedImageView.swift in Sources */,
 				4DA4FC3529575B500018523C /* GradientColorProvider.swift in Sources */,
 				4DA4FC0329561E390018523C /* ViewModelBased.swift in Sources */,

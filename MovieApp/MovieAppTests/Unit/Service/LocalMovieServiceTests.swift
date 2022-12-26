@@ -25,6 +25,12 @@ final class LocalMovieServiceTests: XCTestCase {
         let movieDetails = localMovieService.fetchMovies()
         XCTAssertNotNil(movieDetails)
     }
+ 
+    
+    func testGetMovieDetailsReturnInstance() throws {
+        let movieDetails = localMovieService.fetchMovieDetails(imdbId: "tt0800368")
+        XCTAssertNotNil(movieDetails)
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
