@@ -39,17 +39,37 @@
                                     <constraint firstItem="48V-aa-bly" firstAttribute="leading" secondItem="ue3-Gf-a0c" secondAttribute="leading" id="jJr-ST-yAV"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JrS-E3-6jr">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Ljz-SL-DyH">
+                                        <rect key="frame" x="178" y="361" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <keyboardLayoutGuide key="keyboard" id="Uao-W3-zZg"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Ljz-SL-DyH" firstAttribute="centerY" secondItem="JrS-E3-6jr" secondAttribute="centerY" id="Ujn-82-Mju"/>
+                                    <constraint firstItem="Ljz-SL-DyH" firstAttribute="centerX" secondItem="JrS-E3-6jr" secondAttribute="centerX" id="n8Q-XD-OSI"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JrS-E3-6jr" secondAttribute="trailing" id="7CK-4Z-8vw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ue3-Gf-a0c" secondAttribute="bottom" id="HyF-Sj-cIW"/>
                             <constraint firstItem="ue3-Gf-a0c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Irc-f9-pMQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JrS-E3-6jr" secondAttribute="bottom" id="bQB-Mb-eIt"/>
+                            <constraint firstItem="JrS-E3-6jr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dyG-an-KIu"/>
+                            <constraint firstItem="JrS-E3-6jr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ehA-Qj-svW"/>
                             <constraint firstItem="ue3-Gf-a0c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fKe-0c-uFJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ue3-Gf-a0c" secondAttribute="trailing" id="muk-Pr-KCU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorContainerView" destination="JrS-E3-6jr" id="Ofq-MH-QAS"/>
+                        <outlet property="activityIndicatorView" destination="Ljz-SL-DyH" id="pOe-fH-MTf"/>
                         <outlet property="tableView" destination="48V-aa-bly" id="bRi-qc-tLS"/>
                     </connections>
                 </viewController>
@@ -315,17 +335,37 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="hkz-eG-LZM"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="IqS-I4-SY7"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1K6-ui-NLm">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="mjc-uH-Kuc">
+                                        <rect key="frame" x="178" y="361" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <keyboardLayoutGuide key="keyboard" id="ynv-BP-pVq"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="mjc-uH-Kuc" firstAttribute="centerX" secondItem="1K6-ui-NLm" secondAttribute="centerX" id="2IT-c5-Nq6"/>
+                                    <constraint firstItem="mjc-uH-Kuc" firstAttribute="centerY" secondItem="1K6-ui-NLm" secondAttribute="centerY" id="b1a-sH-TV1"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="irZ-A6-K7M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="irZ-A6-K7M" firstAttribute="top" secondItem="1K6-ui-NLm" secondAttribute="top" id="2GS-Mt-MBg"/>
+                            <constraint firstItem="1K6-ui-NLm" firstAttribute="leading" secondItem="irZ-A6-K7M" secondAttribute="leading" id="MQv-fI-jSf"/>
                             <constraint firstItem="aHP-d5-php" firstAttribute="trailing" secondItem="irZ-A6-K7M" secondAttribute="trailing" id="P14-SH-zFu"/>
                             <constraint firstItem="aHP-d5-php" firstAttribute="top" secondItem="irZ-A6-K7M" secondAttribute="top" id="Wvq-MX-ahh"/>
                             <constraint firstItem="aHP-d5-php" firstAttribute="leading" secondItem="irZ-A6-K7M" secondAttribute="leading" id="Xch-4P-yN8"/>
+                            <constraint firstItem="irZ-A6-K7M" firstAttribute="trailing" secondItem="1K6-ui-NLm" secondAttribute="trailing" id="hZj-eb-Z74"/>
                             <constraint firstItem="aHP-d5-php" firstAttribute="bottom" secondItem="irZ-A6-K7M" secondAttribute="bottom" id="hjg-LQ-5dF"/>
+                            <constraint firstItem="irZ-A6-K7M" firstAttribute="bottom" secondItem="1K6-ui-NLm" secondAttribute="bottom" id="jqR-kc-evD"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorContainerView" destination="1K6-ui-NLm" id="YdC-yk-hEx"/>
+                        <outlet property="activityIndicatorView" destination="mjc-uH-Kuc" id="tRf-kD-XyP"/>
                         <outlet property="actorsCollectionView" destination="W3B-8B-b2N" id="p2B-ed-6Kt"/>
                         <outlet property="contentView" destination="sfh-qV-duW" id="YJE-av-P1s"/>
                         <outlet property="directorNameLabel" destination="7Hb-VI-lwG" id="OEr-5K-Ewp"/>

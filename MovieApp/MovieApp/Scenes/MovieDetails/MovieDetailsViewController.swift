@@ -39,6 +39,10 @@ class MovieDetailsViewController: UIViewController, StoryboardSceneBased, ViewMo
     @IBOutlet private weak var rottenTomatoScoreLabel: UILabel!
     @IBOutlet private weak var metacriticRatingsLabel: UILabel!
     
+    @IBOutlet weak var activityIndicatorContainerView: UIView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.prepareUI()
@@ -58,6 +62,19 @@ class MovieDetailsViewController: UIViewController, StoryboardSceneBased, ViewMo
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: {[weak self] details in
                 self?.updateUI(with: details)
+            }).disposed(by: disposeBag)
+        
+        self.viewModel
+            .isLoading
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [ weak self ] isLoading in
+                guard let self = self else { return }
+                self.activityIndicatorContainerView.isHidden = !isLoading
+                if isLoading {
+                    self.activityIndicatorView.startAnimating()
+                } else {
+                    self.activityIndicatorView.stopAnimating()
+                }
             }).disposed(by: disposeBag)
     }
     

@@ -17,6 +17,12 @@ class MovieListViewController: UIViewController, StoryboardSceneBased, ViewModel
     static var sceneStoryboard: UIStoryboard = UIStoryboard(name: Constants.StoryboardName.main.rawValue, bundle: nil)
         
     @IBOutlet private weak var tableView: UITableView!
+    
+    @IBOutlet private weak var activityIndicatorContainerView: UIView!
+    
+    @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
+    
+    
     var movies: [Movie] = []
     private var disposeBag = DisposeBag()
     
@@ -25,6 +31,10 @@ class MovieListViewController: UIViewController, StoryboardSceneBased, ViewModel
         self.title = "Movies"
         prepareTableView()
         bindViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.viewModel.getMovies(keyword: "Thor", page: 1, type: "movie")
     }
     
@@ -40,8 +50,21 @@ class MovieListViewController: UIViewController, StoryboardSceneBased, ViewModel
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] movies in
                 guard let self = self else { return }
-                self.movies.append(contentsOf: movies)
+                self.movies = movies
                 self.tableView.reloadData()
+            }).disposed(by: disposeBag)
+        
+        self.viewModel
+            .isLoading
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [ weak self ] isLoading in
+                guard let self = self else { return }
+                self.activityIndicatorContainerView.isHidden = !isLoading
+                if isLoading {
+                    self.activityIndicatorView.startAnimating()
+                } else {
+                    self.activityIndicatorView.stopAnimating()
+                }
             }).disposed(by: disposeBag)
     }
     

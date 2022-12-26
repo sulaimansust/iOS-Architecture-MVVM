@@ -25,6 +25,7 @@ class MovieListViewModel: ViewModel {
     
     // Publish subject to handle reactive data and error passing from viewmodel to view
     private let moviesSubject: PublishSubject<[Movie]> = PublishSubject()
+    private let isLoadingSubject: PublishSubject<Bool> = PublishSubject()
     private let errorSubject: PublishSubject<Error> = PublishSubject()
     
     // Public Observables , viewwill subscribe for events and response if a new event is received
@@ -36,24 +37,27 @@ class MovieListViewModel: ViewModel {
         return errorSubject.asObservable()
     }
     
+    public var isLoading: Observable<Bool> {
+        return isLoadingSubject.asObservable()
+    }
+    
     init(httpMovieService: MovieApiService, cachedMovieService: LocalMovieService) {
         self.httpMovieService = httpMovieService
         self.localMovieService = cachedMovieService
     }
     
     func getMovies(keyword: String, page: Int, type: String) {
-
+        self.isLoadingSubject.onNext(true)
         self.httpMovieService
             .searchMovies(keyword: keyword, page: page, type: type)
             .subscribe(onSuccess: { [weak self] movies in
                 self?.moviesSubject.onNext(movies)
                 self?.save(movies: movies)
+                self?.isLoadingSubject.onNext(false)
             }, onFailure: { [weak self] error in
                 // We will not show an error right now, instead fetch data from local storage
-//                self?.errorSubject.onNext(error)
                 self?.fetchStoredMovies()
             }).disposed(by: disposeBag)
-//        fetchStoredMovies()
 
     }
     
@@ -62,8 +66,12 @@ class MovieListViewModel: ViewModel {
             .fetchMovies()
             .subscribe(onNext: { [weak self] movies in
                 self?.moviesSubject.onNext(movies)
+                self?.isLoadingSubject.onNext(false)
+
             }, onError: { [weak self] error in
                 self?.errorSubject.onNext(error)
+                self?.isLoadingSubject.onNext(false)
+
             })
             .disposed(by: disposeBag)
     }

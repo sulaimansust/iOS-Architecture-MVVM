@@ -23,6 +23,8 @@ class MovieDetailsViewModel: ViewModel {
     private let movieDetailsSubject: PublishSubject<MovieDetails> = PublishSubject()
     // Will emit event to all the subscriber, will provide error when happened
     private let errorSubject: PublishSubject<Error> = PublishSubject()
+    private let isLoadingSubject: PublishSubject<Bool> = PublishSubject()
+
 
     // UI will observe this and receive the movie details when available
     public var movieDetails: Observable<MovieDetails> {
@@ -33,6 +35,11 @@ class MovieDetailsViewModel: ViewModel {
         return errorSubject.asObservable()
     }
     
+    public var isLoading: Observable<Bool> {
+        return isLoadingSubject.asObservable()
+    }
+    
+    
     init( movieInfo: MovieInfo, movieService: MovieApiService, localMovieService: LocalMovieService) {
         self.movieInfo = movieInfo
         self.movieService = movieService
@@ -40,11 +47,14 @@ class MovieDetailsViewModel: ViewModel {
     }
     
     func getMovieDetails() {
+        self.isLoadingSubject.onNext(true)
         self.movieService
             .getMovieDetails(imdbId: movieInfo.imdbId)
             .subscribe(onSuccess: { [weak self] details in
                 self?.movieDetailsSubject.onNext(details)
                 self?.save(details: details)
+                self?.isLoadingSubject.onNext(false)
+
             }, onFailure: { [weak self] error in
                 self?.getMovieDetailsFromStorage()
                 // We will throw error only when both internet and local fetch fails ..
@@ -75,8 +85,12 @@ class MovieDetailsViewModel: ViewModel {
         localMovieService.fetchMovieDetails(imdbId: movieInfo.imdbId)
             .subscribe(onNext: { [weak self] details  in
                 self?.movieDetailsSubject.onNext(details)
+                self?.isLoadingSubject.onNext(false)
+
             }, onError: { [weak self] error in
-                    self?.errorSubject.onNext(error)
+                self?.errorSubject.onNext(error)
+                self?.isLoadingSubject.onNext(false)
+
             }).disposed(by: disposeBag)
     }
     
