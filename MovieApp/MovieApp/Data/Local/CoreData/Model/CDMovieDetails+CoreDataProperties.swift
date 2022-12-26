@@ -16,28 +16,18 @@ extension CDMovieDetails {
         return NSFetchRequest<CDMovieDetails>(entityName: "CDMovieDetails")
     }
     
-    internal class func createOrUpdate(details: MovieDetails, with stack: MovieDataStack) {
+    public class func createOrUpdate(details: MovieDetails, with stack: MovieDataStack) {
         var movieDetails: CDMovieDetails?
-        let movieFetch: NSFetchRequest<CDMovieDetails> = CDMovieDetails.fetchRequest()
         
-        let predicate = NSPredicate(format: "imdbID = %@", details.imdbID)
-        movieFetch.predicate = predicate
-//        NSCompoundPredicate(andPredicateWithSubpredicates: [predicate])
-        do {
-            let results = try stack.managedContext.fetch(movieFetch)
-            if results.isEmpty {
-                movieDetails = CDMovieDetails(context: stack.managedContext)
-            } else {
-                movieDetails = results.first
-            }
-            movieDetails?.update(with: details, and: stack)
-        } catch let error as NSError {
-            print("Fetch error: \(error) description: \(error.userInfo)")
-
+        let results = CDMovieDetails.fetch(stack: stack, with: details.imdbID)
+        
+        if results.isEmpty {
+            movieDetails = CDMovieDetails(context: stack.managedContext)
+            movieDetails?.create(with: details)
         }
     }
     
-    internal func update(with movieDetails:  MovieDetails, and stack: MovieDataStack){
+    public func create(with movieDetails:  MovieDetails){
         self.title = movieDetails.title
         self.year  = movieDetails.year
         self.rated = movieDetails.rated
@@ -57,6 +47,21 @@ extension CDMovieDetails {
         self.imdbID = movieDetails.imdbID
         self.type = movieDetails.type
         // TODO: - Some properties are not added
+    }
+
+    public class func fetch(stack: MovieDataStack, with imdbId: String? = nil) -> [CDMovieDetails] {
+        let movieFetch: NSFetchRequest<CDMovieDetails> = CDMovieDetails.fetchRequest()
+        if let id = imdbId {
+            let predicate = NSPredicate(format: "imdbID = %@", id)
+            movieFetch.predicate = predicate
+        }
+
+        do {
+            return try stack.managedContext.fetch(movieFetch)
+        } catch let error as NSError {
+            print("Fetch error: \(error) description: \(error.userInfo)")
+            return []
+        }
     }
 
     @NSManaged public var title: String?

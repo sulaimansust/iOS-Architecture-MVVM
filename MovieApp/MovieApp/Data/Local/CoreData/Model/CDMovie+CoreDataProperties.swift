@@ -19,9 +19,8 @@ extension CDMovie {
     public class func createOrUpdate(movie: Movie, details: MovieDetails?, with stack: MovieDataStack) {
         var newMovie: CDMovie?
         
-        let predicate = NSPredicate(format: "imdbID = %@", movie.imdbID)
         
-        let results = CDMovie.fetch(stack: stack, with: predicate)
+        let results = CDMovie.fetch(stack: stack, with: movie.imdbID)
 
         if results.isEmpty {
             newMovie = CDMovie(context: stack.managedContext)
@@ -48,11 +47,13 @@ extension CDMovie {
         self.year = movie.year
     }
     
-    public class func fetch(stack: MovieDataStack, with predicate: NSPredicate? = nil) -> [CDMovie] {
+    public class func fetch(stack: MovieDataStack, with imdbId: String? = nil) -> [CDMovie] {
         let movieFetch: NSFetchRequest<CDMovie> = CDMovie.fetchRequest()
-        if let predicate = predicate {
+        if let id = imdbId {
+            let predicate = NSPredicate(format: "imdbID = %@", id)
             movieFetch.predicate = predicate
         }
+
         do {
             return try stack.managedContext.fetch(movieFetch)
         } catch let error as NSError {

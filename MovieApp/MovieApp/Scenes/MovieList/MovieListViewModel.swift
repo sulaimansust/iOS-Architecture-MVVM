@@ -15,7 +15,7 @@ class MovieListViewModel: ViewModel {
     
     // Necessary Services
     private let httpMovieService: MovieApiService
-    private let cachedMovieService: LocalMovieService
+    private let localMovieService: LocalMovieService
     
     // Will take care of memory freeing the reactive objects
     private var disposeBag = DisposeBag()
@@ -38,7 +38,7 @@ class MovieListViewModel: ViewModel {
     
     init(httpMovieService: MovieApiService, cachedMovieService: LocalMovieService) {
         self.httpMovieService = httpMovieService
-        self.cachedMovieService = cachedMovieService
+        self.localMovieService = cachedMovieService
     }
     
     func getMovies(keyword: String, page: Int, type: String) {
@@ -53,11 +53,12 @@ class MovieListViewModel: ViewModel {
 //                self?.errorSubject.onNext(error)
                 self?.fetchStoredMovies()
             }).disposed(by: disposeBag)
+//        fetchStoredMovies()
 
     }
     
     func fetchStoredMovies() {
-        self.cachedMovieService
+        self.localMovieService
             .fetchMovies()
             .subscribe(onNext: { [weak self] movies in
                 self?.moviesSubject.onNext(movies)
@@ -68,7 +69,7 @@ class MovieListViewModel: ViewModel {
     }
     
     private func save(movies: [Movie]) {
-        cachedMovieService.save(movies: movies)
+        localMovieService.save(movies: movies)
     }
     
 }

@@ -20,8 +20,8 @@ public class CachedMovieService: LocalMovieService {
     }
     
     public func fetchMovies() -> Observable<[Movie]> {
-        return Observable.create({ [weak self] observer in
-            let movies = self?.localDataManager.getMovies() ?? []
+        return Observable.create({ [unowned self] observer in
+            let movies = self.localDataManager.getMovies()
             observer.onNext(movies)
             return Disposables.create()
         })
@@ -30,4 +30,22 @@ public class CachedMovieService: LocalMovieService {
     public func save(movies: [Movie]) {
         localDataManager.save(movies: movies)
     }
+    
+    public func save(details: MovieDetails) {
+        localDataManager.save(details: details)
+    }
+    
+    public func fetchMovieDetails(imdbId: String) -> Observable<MovieDetails> {
+        return Observable.create({ [unowned self] observer in
+            let movieDetails = self.localDataManager.getMovieDetails(imdbId: imdbId).first
+            if let details = movieDetails {
+                observer.onNext(details)
+            } else {
+                observer.onError(NSError(domain: "No movie details found", code: 404))
+            }
+            return Disposables.create()
+        })
+        
+    }
+
 }

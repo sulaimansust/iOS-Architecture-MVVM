@@ -17,6 +17,7 @@ class MovieDetailsViewModel: ViewModel {
     private let disposeBag = DisposeBag()
     let movieInfo: MovieInfo
     private let movieService: MovieApiService
+    private let localMovieService: LocalMovieService
     
     // Will emit event to all the subscriber, will provide moviedetails when fetched
     private let movieDetailsSubject: PublishSubject<MovieDetails> = PublishSubject()
@@ -32,9 +33,10 @@ class MovieDetailsViewModel: ViewModel {
         return errorSubject.asObservable()
     }
     
-    init(movieInfo: MovieInfo, service: MovieApiService) {
+    init( movieInfo: MovieInfo, movieService: MovieApiService, localMovieService: LocalMovieService) {
         self.movieInfo = movieInfo
-        self.movieService = service
+        self.movieService = movieService
+        self.localMovieService = localMovieService
     }
     
     func getMovieDetails() {
@@ -42,8 +44,11 @@ class MovieDetailsViewModel: ViewModel {
             .getMovieDetails(imdbId: movieInfo.imdbId)
             .subscribe(onSuccess: { [weak self] details in
                 self?.movieDetailsSubject.onNext(details)
+                self?.save(details: details)
             }, onFailure: { [weak self] error in
-                self?.errorSubject.onNext(error)
+                getMovieDetailsFromStorage()
+                // We will throw error only when both internet and local fetch fails ..
+//                self?.errorSubject.onNext(error)
             })
             .disposed(by: disposeBag)
     }
@@ -60,6 +65,19 @@ class MovieDetailsViewModel: ViewModel {
     
     func getActors(from details: MovieDetails) -> [String] {
         return details.actors.components(separatedBy: ",")
+    }
+    
+    private func save(details: MovieDetails) {
+        localMovieService.save(details: details)
+    }
+    
+    private func getMovieDetailsFromStorage()  {
+        localMovieService.fetchMovieDetails(imdbId: movieInfo.imdbId)
+            .subscribe(onNext: { [weak self] details  in
+                self?.movieDetailsSubject.onNext(details)
+            }, onError: { [weak self] error in
+                    self?.errorSubject.onNext(error)
+            }).disposed(by: disposeBag)
     }
     
 }
