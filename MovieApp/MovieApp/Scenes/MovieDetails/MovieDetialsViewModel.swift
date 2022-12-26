@@ -46,7 +46,7 @@ class MovieDetailsViewModel: ViewModel {
                 self?.movieDetailsSubject.onNext(details)
                 self?.save(details: details)
             }, onFailure: { [weak self] error in
-                getMovieDetailsFromStorage()
+                self?.getMovieDetailsFromStorage()
                 // We will throw error only when both internet and local fetch fails ..
 //                self?.errorSubject.onNext(error)
             })
