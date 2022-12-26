@@ -6,13 +6,23 @@
 //
 
 import XCTest
+import RxSwift
+import RxCocoa
+import RxTest
+
 @testable import MovieApp
 
 final class MovieListViewModelTests: XCTestCase {
 
+    var localMovieService: LocalMovieService!
+    var httpMovieService: MovieApiService!
+    var sut: MovieListViewModel!
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.\
         try super.setUpWithError()
+        httpMovieService = MockMovieApiService()
+        localMovieService = MockCachedMovieService()
+        sut = MovieListViewModel(httpMovieService: httpMovieService, cachedMovieService: localMovieService)
         
     }
 
@@ -20,12 +30,15 @@ final class MovieListViewModelTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testGetMovies() throws {
+        let scheduler = TestScheduler(initialClock: 0)
+        let result = scheduler.start(created: 0, subscribed: 0, disposed: 100) {
+            let response = self.sut.movies.replayAll()
+            _ = response.connect()
+            self.sut.getMovies(keyword: "Thor", page: 1, type: "movie")
+            return response
+        }
+        XCTAssertEqual(result.events, [.next(0, Seeds.movies)])
     }
 
     func testPerformanceExample() throws {

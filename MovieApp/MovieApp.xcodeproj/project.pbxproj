@@ -85,6 +85,8 @@
 		4D81AB32295A45FA00784B7B /* CDMovie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AB122959FFAE00784B7B /* CDMovie+CoreDataClass.swift */; };
 		4D81AB33295A45FC00784B7B /* CDRating+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AB112959FFAE00784B7B /* CDRating+CoreDataProperties.swift */; };
 		4D81AB34295A45FF00784B7B /* CDRating+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AB102959FFAE00784B7B /* CDRating+CoreDataClass.swift */; };
+		4D81AB6C295A4FF700784B7B /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AB6B295A4FF700784B7B /* RxTest */; };
+		4D81AB6E295A58D400784B7B /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AB6D295A58D400784B7B /* Seeds.swift */; };
 		4DA4FB932954A5420018523C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FB922954A5420018523C /* AppDelegate.swift */; };
 		4DA4FB952954A5420018523C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FB942954A5420018523C /* SceneDelegate.swift */; };
 		4DA4FB9A2954A5420018523C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA4FB982954A5420018523C /* Main.storyboard */; };
@@ -259,6 +261,7 @@
 		4D81AB142959FFAE00784B7B /* CDMovieDetails+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDMovieDetails+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4D81AB152959FFAE00784B7B /* CDMovieDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDMovieDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4D81AB25295A018D00784B7B /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
+		4D81AB6D295A58D400784B7B /* Seeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seeds.swift; sourceTree = "<group>"; };
 		4DA4FB8F2954A5420018523C /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA4FB922954A5420018523C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DA4FB942954A5420018523C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -334,6 +337,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D81AB6C295A4FF700784B7B /* RxTest in Frameworks */,
 				4D81AA982959376A00784B7B /* RxFlow in Frameworks */,
 				4D81AA802959353900784B7B /* RxSwift in Frameworks */,
 				4D81AA9C2959376A00784B7B /* Kingfisher in Frameworks */,
@@ -421,6 +425,7 @@
 				4D81AADE2959D2D700784B7B /* Service */,
 				4D81AAC62959440F00784B7B /* Model */,
 				4D81AAC72959449100784B7B /* ViewModel */,
+				4D81AB6D295A58D400784B7B /* Seeds.swift */,
 			);
 			path = Unit;
 			sourceTree = "<group>";
@@ -819,6 +824,7 @@
 				4D81AA972959376A00784B7B /* RxFlow */,
 				4D81AA992959376A00784B7B /* Reusable */,
 				4D81AA9B2959376A00784B7B /* Kingfisher */,
+				4D81AB6B295A4FF700784B7B /* RxTest */,
 			);
 			productName = MovieAppTests;
 			productReference = 4DA4FBA82954A5440018523C /* MovieAppTests.xctest */;
@@ -1009,6 +1015,7 @@
 			files = (
 				4DA4FC932957E4B80018523C /* MovieDetialsViewModel.swift in Sources */,
 				4DA4FC38295778360018523C /* MovieListViewController+UITableView.swift in Sources */,
+				4D81AB6E295A58D400784B7B /* Seeds.swift in Sources */,
 				4D81AA152959006E00784B7B /* Constants+Rating.swift in Sources */,
 				4DA4FC6B2957A5650018523C /* NetworkError.swift in Sources */,
 				4D81AB192959FFAE00784B7B /* CDRating+CoreDataProperties.swift in Sources */,
@@ -1582,6 +1589,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4DA4FC812957DFAC0018523C /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		4D81AB6B295A4FF700784B7B /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D81AA782959352400784B7B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
 		};
 		4DA4FBDA2955FC660018523C /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
