@@ -8,7 +8,8 @@
 import Foundation
 
 // MARK: - MovieDetails
-public struct MovieDetails: Codable {
+public struct MovieDetails: Codable, Equatable {
+    
     let title, year, rated, released: String
     let runtime, genre, director, writer: String
     let actors, plot, language, country: String
@@ -47,7 +48,7 @@ public struct MovieDetails: Codable {
 }
 
 // MARK: - Rating
-struct Rating: Codable {
+struct Rating: Codable, Equatable {
     let source, value: String
 
     enum CodingKeys: String, CodingKey {

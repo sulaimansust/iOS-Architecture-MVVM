@@ -425,7 +425,6 @@
 				4D81AADE2959D2D700784B7B /* Service */,
 				4D81AAC62959440F00784B7B /* Model */,
 				4D81AAC72959449100784B7B /* ViewModel */,
-				4D81AB6D295A58D400784B7B /* Seeds.swift */,
 			);
 			path = Unit;
 			sourceTree = "<group>";
@@ -442,6 +441,7 @@
 		4D81AAE32959D33800784B7B /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				4D81AB6D295A58D400784B7B /* Seeds.swift */,
 				4D81AADF2959D2E900784B7B /* MockMovieApiService.swift */,
 				4D81AAE12959D30700784B7B /* MockCachedMovieService.swift */,
 			);
