@@ -25,6 +25,26 @@
 		4D81AA142959006E00784B7B /* Constants+Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AA132959006E00784B7B /* Constants+Rating.swift */; };
 		4D81AA152959006E00784B7B /* Constants+Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AA132959006E00784B7B /* Constants+Rating.swift */; };
 		4D81AA162959006E00784B7B /* Constants+Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AA132959006E00784B7B /* Constants+Rating.swift */; };
+		4D81AA7A2959352400784B7B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA792959352400784B7B /* RxCocoa */; };
+		4D81AA7C2959352400784B7B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA7B2959352400784B7B /* RxSwift */; };
+		4D81AA7E2959353900784B7B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA7D2959353900784B7B /* RxCocoa */; };
+		4D81AA802959353900784B7B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA7F2959353900784B7B /* RxSwift */; };
+		4D81AA822959367000784B7B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA812959367000784B7B /* RxCocoa */; };
+		4D81AA842959367000784B7B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA832959367000784B7B /* RxSwift */; };
+		4D81AA852959368C00784B7B /* AppStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FBE82955FE490018523C /* AppStep.swift */; };
+		4D81AA86295936A600784B7B /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FC1029562BF80018523C /* MovieListViewController.swift */; };
+		4D81AA87295936C200784B7B /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FC1329562C080018523C /* MovieListViewModel.swift */; };
+		4D81AA88295936CF00784B7B /* Constants+StoryboardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FC08295628670018523C /* Constants+StoryboardName.swift */; };
+		4D81AA8A2959376100784B7B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA892959376100784B7B /* Moya */; };
+		4D81AA8C2959376100784B7B /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA8B2959376100784B7B /* RxMoya */; };
+		4D81AA8E2959376100784B7B /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA8D2959376100784B7B /* RxFlow */; };
+		4D81AA902959376100784B7B /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA8F2959376100784B7B /* Reusable */; };
+		4D81AA922959376100784B7B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA912959376100784B7B /* Kingfisher */; };
+		4D81AA942959376A00784B7B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA932959376A00784B7B /* Moya */; };
+		4D81AA962959376A00784B7B /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA952959376A00784B7B /* RxMoya */; };
+		4D81AA982959376A00784B7B /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA972959376A00784B7B /* RxFlow */; };
+		4D81AA9A2959376A00784B7B /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA992959376A00784B7B /* Reusable */; };
+		4D81AA9C2959376A00784B7B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA9B2959376A00784B7B /* Kingfisher */; };
 		4DA4FB932954A5420018523C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FB922954A5420018523C /* AppDelegate.swift */; };
 		4DA4FB952954A5420018523C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FB942954A5420018523C /* SceneDelegate.swift */; };
 		4DA4FB9A2954A5420018523C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA4FB982954A5420018523C /* Main.storyboard */; };
@@ -241,11 +261,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D81AA7A2959352400784B7B /* RxCocoa in Frameworks */,
 				4DA4FC832957DFAC0018523C /* Kingfisher in Frameworks */,
 				4DA4FBE02955FCA60018523C /* RxFlow in Frameworks */,
 				4DA4FBDD2955FC660018523C /* RxMoya in Frameworks */,
 				4DA4FBDB2955FC660018523C /* Moya in Frameworks */,
 				4DA4FBE32955FD350018523C /* Reusable in Frameworks */,
+				4D81AA7C2959352400784B7B /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +275,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D81AA982959376A00784B7B /* RxFlow in Frameworks */,
+				4D81AA802959353900784B7B /* RxSwift in Frameworks */,
+				4D81AA9C2959376A00784B7B /* Kingfisher in Frameworks */,
+				4D81AA7E2959353900784B7B /* RxCocoa in Frameworks */,
+				4D81AA962959376A00784B7B /* RxMoya in Frameworks */,
+				4D81AA942959376A00784B7B /* Moya in Frameworks */,
+				4D81AA9A2959376A00784B7B /* Reusable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +289,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D81AA8E2959376100784B7B /* RxFlow in Frameworks */,
+				4D81AA842959367000784B7B /* RxSwift in Frameworks */,
+				4D81AA922959376100784B7B /* Kingfisher in Frameworks */,
+				4D81AA822959367000784B7B /* RxCocoa in Frameworks */,
+				4D81AA8C2959376100784B7B /* RxMoya in Frameworks */,
+				4D81AA8A2959376100784B7B /* Moya in Frameworks */,
+				4D81AA902959376100784B7B /* Reusable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +319,13 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		4D81AA732959329000784B7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4DA4FB862954A5420018523C = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +333,7 @@
 				4DA4FBAB2954A5440018523C /* MovieAppTests */,
 				4DA4FBB52954A5440018523C /* MovieAppUITests */,
 				4DA4FB902954A5420018523C /* Products */,
+				4D81AA732959329000784B7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -579,6 +623,8 @@
 				4DA4FBDF2955FCA60018523C /* RxFlow */,
 				4DA4FBE22955FD350018523C /* Reusable */,
 				4DA4FC822957DFAC0018523C /* Kingfisher */,
+				4D81AA792959352400784B7B /* RxCocoa */,
+				4D81AA7B2959352400784B7B /* RxSwift */,
 			);
 			productName = MovieApp;
 			productReference = 4DA4FB8F2954A5420018523C /* MovieApp.app */;
@@ -598,6 +644,15 @@
 				4DA4FBAA2954A5440018523C /* PBXTargetDependency */,
 			);
 			name = MovieAppTests;
+			packageProductDependencies = (
+				4D81AA7D2959353900784B7B /* RxCocoa */,
+				4D81AA7F2959353900784B7B /* RxSwift */,
+				4D81AA932959376A00784B7B /* Moya */,
+				4D81AA952959376A00784B7B /* RxMoya */,
+				4D81AA972959376A00784B7B /* RxFlow */,
+				4D81AA992959376A00784B7B /* Reusable */,
+				4D81AA9B2959376A00784B7B /* Kingfisher */,
+			);
 			productName = MovieAppTests;
 			productReference = 4DA4FBA82954A5440018523C /* MovieAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -616,6 +671,15 @@
 				4DA4FBB42954A5440018523C /* PBXTargetDependency */,
 			);
 			name = MovieAppUITests;
+			packageProductDependencies = (
+				4D81AA812959367000784B7B /* RxCocoa */,
+				4D81AA832959367000784B7B /* RxSwift */,
+				4D81AA892959376100784B7B /* Moya */,
+				4D81AA8B2959376100784B7B /* RxMoya */,
+				4D81AA8D2959376100784B7B /* RxFlow */,
+				4D81AA8F2959376100784B7B /* Reusable */,
+				4D81AA912959376100784B7B /* Kingfisher */,
+			);
 			productName = MovieAppUITests;
 			productReference = 4DA4FBB22954A5440018523C /* MovieAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -657,6 +721,7 @@
 				4DA4FBDE2955FCA60018523C /* XCRemoteSwiftPackageReference "RxFlow" */,
 				4DA4FBE12955FD350018523C /* XCRemoteSwiftPackageReference "Reusable" */,
 				4DA4FC812957DFAC0018523C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				4D81AA782959352400784B7B /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 4DA4FB902954A5420018523C /* Products */;
 			projectDirPath = "";
@@ -826,19 +891,23 @@
 				4DA4FC4B29577BA90018523C /* MovieAPI+TargetType.swift in Sources */,
 				4DA4FC942957E4B80018523C /* MovieDetialsViewModel.swift in Sources */,
 				4DA4FBF829561D8A0018523C /* SplashViewModel.swift in Sources */,
+				4D81AA86295936A600784B7B /* MovieListViewController.swift in Sources */,
 				4DA4FBB92954A5440018523C /* MovieAppUITestsLaunchTests.swift in Sources */,
 				4D81AA162959006E00784B7B /* Constants+Rating.swift in Sources */,
 				4DA4FC60295784500018523C /* Constants+ContentType.swift in Sources */,
 				4DA4FC28295753C40018523C /* Movie.swift in Sources */,
 				4D81AA122958FCEF00784B7B /* MovieInfo.swift in Sources */,
+				4D81AA88295936CF00784B7B /* Constants+StoryboardName.swift in Sources */,
 				4DA4FBB72954A5440018523C /* MovieAppUITests.swift in Sources */,
 				4DA4FC6429579C220018523C /* Networking.swift in Sources */,
 				4DA4FC39295778360018523C /* MovieListViewController+UITableView.swift in Sources */,
+				4D81AA852959368C00784B7B /* AppStep.swift in Sources */,
 				4DA4FBD82955FAB50018523C /* Assets.swift in Sources */,
 				4DA4FBFE29561DFC0018523C /* ViewModel.swift in Sources */,
 				4DA4FC4729577B5A0018523C /* ApiPath.swift in Sources */,
 				4DA4FC242957463B0018523C /* MovieItemCell.swift in Sources */,
 				4DA4FBF429561D7F0018523C /* SplashViewController.swift in Sources */,
+				4D81AA87295936C200784B7B /* MovieListViewModel.swift in Sources */,
 				4DA4FC2C295754960018523C /* MovieList.swift in Sources */,
 				4D81AA0A2958F01E00784B7B /* StringFormatHelper.swift in Sources */,
 				4DA4FC782957B0B10018523C /* HTTPMovieService.swift in Sources */,
@@ -1185,6 +1254,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4D81AA782959352400784B7B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		4DA4FBD92955FC660018523C /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:Moya/Moya.git";
@@ -1220,6 +1297,86 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4D81AA792959352400784B7B /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D81AA782959352400784B7B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		4D81AA7B2959352400784B7B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D81AA782959352400784B7B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		4D81AA7D2959353900784B7B /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D81AA782959352400784B7B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		4D81AA7F2959353900784B7B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D81AA782959352400784B7B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		4D81AA812959367000784B7B /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D81AA782959352400784B7B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		4D81AA832959367000784B7B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D81AA782959352400784B7B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		4D81AA892959376100784B7B /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DA4FBD92955FC660018523C /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		4D81AA8B2959376100784B7B /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DA4FBD92955FC660018523C /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		4D81AA8D2959376100784B7B /* RxFlow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DA4FBDE2955FCA60018523C /* XCRemoteSwiftPackageReference "RxFlow" */;
+			productName = RxFlow;
+		};
+		4D81AA8F2959376100784B7B /* Reusable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DA4FBE12955FD350018523C /* XCRemoteSwiftPackageReference "Reusable" */;
+			productName = Reusable;
+		};
+		4D81AA912959376100784B7B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DA4FC812957DFAC0018523C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		4D81AA932959376A00784B7B /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DA4FBD92955FC660018523C /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		4D81AA952959376A00784B7B /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DA4FBD92955FC660018523C /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		4D81AA972959376A00784B7B /* RxFlow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DA4FBDE2955FCA60018523C /* XCRemoteSwiftPackageReference "RxFlow" */;
+			productName = RxFlow;
+		};
+		4D81AA992959376A00784B7B /* Reusable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DA4FBE12955FD350018523C /* XCRemoteSwiftPackageReference "Reusable" */;
+			productName = Reusable;
+		};
+		4D81AA9B2959376A00784B7B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DA4FC812957DFAC0018523C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		4DA4FBDA2955FC660018523C /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4DA4FBD92955FC660018523C /* XCRemoteSwiftPackageReference "Moya" */;
