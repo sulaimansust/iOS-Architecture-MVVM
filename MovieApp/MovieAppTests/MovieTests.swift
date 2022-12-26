@@ -32,6 +32,23 @@ final class MovieTests: XCTestCase {
         XCTAssertNotNil(movie)
     }
     
+    func testProvideReturnUnmodifiedData() throws {
+        /// Arrange
+        let posterUrl = "https://m.media-amazon.com/images/M/MV5BOGE4NzU1YTAtNzA3Mi00ZTA2LTg2YmYtMDJmMThiMjlkYjg2XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg"
+        let movie = Movie(title: "Title",
+                          year: "2022",
+                          imdbID: "tt0800369",
+                          type: "movie",
+                          poster: posterUrl)
+        
+        XCTAssertEqual(movie.title, "Title")
+        XCTAssertEqual(movie.year, "2022")
+        XCTAssertEqual(movie.type, "movie")
+        XCTAssertEqual(movie.imdbID, "tt0800369")
+        XCTAssertEqual(movie.poster, posterUrl)
+        
+    }
+    
     func testMovieFromJson() throws {
         let bundle = Bundle(for: type(of: self))
         guard let url = bundle.url(forResource: "movie", withExtension: "json") else {
@@ -46,6 +63,7 @@ final class MovieTests: XCTestCase {
         XCTAssertEqual(movie.title, "Thor")
         XCTAssertEqual(movie.year, "2011")
         XCTAssertEqual(movie.type, "movie")
+        XCTAssertEqual(movie.imdbID, "tt0800369")
         XCTAssertEqual(movie.poster, posterUrl)
     
 

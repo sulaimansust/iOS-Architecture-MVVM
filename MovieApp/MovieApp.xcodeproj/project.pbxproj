@@ -47,6 +47,8 @@
 		4D81AA9C2959376A00784B7B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4D81AA9B2959376A00784B7B /* Kingfisher */; };
 		4D81AAB829593A8D00784B7B /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AAB729593A8D00784B7B /* MovieTests.swift */; };
 		4D81AABA29593D0800784B7B /* movie.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D81AAB929593D0800784B7B /* movie.json */; };
+		4D81AABC29593E6500784B7B /* MovieListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81AABB29593E6500784B7B /* MovieListTests.swift */; };
+		4D81AABE2959407700784B7B /* movie_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D81AABD2959407700784B7B /* movie_list.json */; };
 		4DA4FB932954A5420018523C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FB922954A5420018523C /* AppDelegate.swift */; };
 		4DA4FB952954A5420018523C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4FB942954A5420018523C /* SceneDelegate.swift */; };
 		4DA4FB9A2954A5420018523C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA4FB982954A5420018523C /* Main.storyboard */; };
@@ -203,6 +205,8 @@
 		4D81AA132959006E00784B7B /* Constants+Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Rating.swift"; sourceTree = "<group>"; };
 		4D81AAB729593A8D00784B7B /* MovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
 		4D81AAB929593D0800784B7B /* movie.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movie.json; sourceTree = "<group>"; };
+		4D81AABB29593E6500784B7B /* MovieListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTests.swift; sourceTree = "<group>"; };
+		4D81AABD2959407700784B7B /* movie_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movie_list.json; sourceTree = "<group>"; };
 		4DA4FB8F2954A5420018523C /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA4FB922954A5420018523C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DA4FB942954A5420018523C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -330,6 +334,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4D81AABF2959412C00784B7B /* jsons */ = {
+			isa = PBXGroup;
+			children = (
+				4D81AAB929593D0800784B7B /* movie.json */,
+				4D81AABD2959407700784B7B /* movie_list.json */,
+			);
+			path = jsons;
+			sourceTree = "<group>";
+		};
 		4DA4FB862954A5420018523C = {
 			isa = PBXGroup;
 			children = (
@@ -371,9 +384,10 @@
 		4DA4FBAB2954A5440018523C /* MovieAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				4D81AABF2959412C00784B7B /* jsons */,
+				4D81AABB29593E6500784B7B /* MovieListTests.swift */,
 				4D81AAB729593A8D00784B7B /* MovieTests.swift */,
 				4DA4FBAC2954A5440018523C /* MovieAppTests.swift */,
-				4D81AAB929593D0800784B7B /* movie.json */,
 			);
 			path = MovieAppTests;
 			sourceTree = "<group>";
@@ -763,6 +777,7 @@
 				4DA4FBF02956057A0018523C /* SplashScreen.storyboard in Resources */,
 				4DA4FC1F295746030018523C /* MovieItemCell.xib in Resources */,
 				4D81AABA29593D0800784B7B /* movie.json in Resources */,
+				4D81AABE2959407700784B7B /* movie_list.json in Resources */,
 				4D81AA052958AC0600784B7B /* ActorCellCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -852,6 +867,7 @@
 				4DA4FC4A29577BA90018523C /* MovieAPI+TargetType.swift in Sources */,
 				4DA4FC732957AF510018523C /* MovieSearchable.swift in Sources */,
 				4DA4FBE72955FDF40018523C /* AppFlow.swift in Sources */,
+				4D81AABC29593E6500784B7B /* MovieListTests.swift in Sources */,
 				4DA4FC232957463B0018523C /* MovieItemCell.swift in Sources */,
 				4D81A9FC295895E700784B7B /* RoundedImageView.swift in Sources */,
 				4DA4FC52295781760018523C /* AppConfigurationProvider.swift in Sources */,
