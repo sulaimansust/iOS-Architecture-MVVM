@@ -28,6 +28,9 @@ final class MovieListViewModelTests: XCTestCase {
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
+        httpMovieService = nil
+        localMovieService = nil
     }
 
     func testGetMovies() throws {
